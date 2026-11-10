@@ -1,0 +1,18 @@
+[package]
+name = "basalt-plugin-parser-kotlin"
+version = "0.1.0"
+edition = "2021"
+description = "Tree-sitter Kotlin parser plugin for Basalt"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+panic = "abort"
+
+[dependencies]
+tree-sitter = "0.23"
+tree-sitter-kotlin-ng = "1.1"
